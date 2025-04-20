@@ -26,13 +26,13 @@ import SwiftUI
         self.window.makeKeyAndVisible()
 
         // Register the platform view factory
-            if let registrar = flutterEngine.registrar(forPlugin: "ProfileViewPlugin") {
-                    let factory = ProfileViewFactory(messenger: registrar.messenger())
-                    registrar.register(
-                        factory,
-                        withId: "profile-view"
-                    )
-                }
+        if let registrar = flutterEngine.registrar(forPlugin: "ProfileViewPlugin") {
+            let factory = ProfileViewFactory(messenger: registrar.messenger())
+            registrar.register(
+                factory,
+                withId: "profile-view"
+            )
+        }#imageLiteral(resourceName: "simulator_screenshot_3EE04911-469C-44A6-9A9B-B07B2E6031B2.png")
 
         setupMethodChannel(controller: flutterViewController)
 

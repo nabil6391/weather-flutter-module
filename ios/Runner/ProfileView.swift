@@ -132,7 +132,6 @@ class ProfilePlatformView: NSObject, FlutterPlatformView {
         self.messenger = messenger
         super.init()
 
-        // Setup the view
         setupProfileView(frame: frame)
     }
 
@@ -153,18 +152,14 @@ class ProfilePlatformView: NSObject, FlutterPlatformView {
             methodChannel.invokeMethod("getUserProfile", arguments: userProfile)
         }
 
-            // Create the SwiftUI view
-               let swiftUIView = UIHostingController(rootView: ProfileView(sendDataCallback: sendDataCallback))
+        // Create the SwiftUI view
+       let swiftUIView = UIHostingController(rootView: ProfileView(sendDataCallback: sendDataCallback))
 
-               // Add the SwiftUI view as a child view
-               swiftUIView.view.frame = _view.bounds
-               swiftUIView.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+       // Add the SwiftUI view as a child view
+       swiftUIView.view.frame = _view.bounds
+       swiftUIView.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
-               _view.addSubview(swiftUIView.view)
-
-               // You need to maintain a reference to the hosting controller
-               // to prevent it from being deallocated
-               objc_setAssociatedObject(_view, "hostingController", swiftUIView, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+       _view.addSubview(swiftUIView.view)
     }
 
     func view() -> UIView {

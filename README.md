@@ -8,6 +8,11 @@ This app consists of two main tabs:
 1. **Dashboard Tab (Flutter)** - Displays weather data from OpenWeatherMap API and shows user profile data received from the native module
 2. **Profile Tab (Native)** - Displays a user profile using native code (SwiftUI for iOS / Jetpack Compose for Android)
 
+## Demo
+
+![Demo](gif/android.gif)
+![Demo](gif/ios.gif)
+
 ## Project Structure
 
 ```
@@ -41,7 +46,6 @@ lib/
 - Uses `PlatformView` to embed Jetpack Compose into Flutter
 - Implemented in `ProfileViewFactory.kt`
 - Profile data is sent to Flutter via MethodChannel when user taps "Send Profile to Dashboard" button
-
 
 ## Data Flow
 
