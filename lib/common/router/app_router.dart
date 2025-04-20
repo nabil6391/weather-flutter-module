@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:weather_profile_app/features/app_shell.dart';
-import 'package:weather_profile_app/features/user_profile/screens/profile_screen.dart';
-import 'package:weather_profile_app/features/dashboard/screens/dashboard_screen.dart';
+import 'package:weather_profile_app/features/dashboard/presentation/dashboard_screen.dart';
+import 'package:weather_profile_app/features/user_profile/presentation/profile_screen.dart';
 
 class AppRouter {
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
