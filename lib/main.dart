@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:weather_profile_app/common/services/startup_service.dart';
+import 'package:weather_profile_app/features/dashboard/domain/weather_provider.dart';
+import 'package:weather_profile_app/features/user_profile/domain/user_provider.dart';
+
 import 'common/network/dio_client.dart';
 import 'common/router/app_router.dart';
-import 'features/dashboard/providers/weather_provider.dart';
-import 'features/user_profile/providers/user_provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,7 +14,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
