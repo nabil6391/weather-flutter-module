@@ -10,8 +10,9 @@ This app consists of two main tabs:
 
 ## Demo
 
-![Demo](gif/android.gif)
-![Demo](gif/ios.gif)
+|                           Android                           |                         iOS                         |
+|:-----------------------------------------------------------:|:---------------------------------------------------:|
+| <img src="gif/android.gif" alt="Android Demo" width="400"/> | <img src="gif/ios.gif" alt="iOS Demo" width="400"/> |
 
 ## Project Structure
 
